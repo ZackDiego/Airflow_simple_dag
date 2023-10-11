@@ -1,0 +1,17 @@
+[2023-08-08T05:44:30.498+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: catchup_backfill_dag.bash_task manual__2023-08-08T05:44:29.492442+00:00 [queued]>
+[2023-08-08T05:44:30.505+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: catchup_backfill_dag.bash_task manual__2023-08-08T05:44:29.492442+00:00 [queued]>
+[2023-08-08T05:44:30.505+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 6
+[2023-08-08T05:44:30.515+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): bash_task> on 2023-08-08 05:44:29.492442+00:00
+[2023-08-08T05:44:30.520+0000] {standard_task_runner.py:57} INFO - Started process 1958 to run task
+[2023-08-08T05:44:30.524+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'catchup_backfill_dag', 'bash_task', 'manual__2023-08-08T05:44:29.492442+00:00', '--job-id', '1076', '--raw', '--subdir', 'DAGS_FOLDER/dag_catchup_backfill.py', '--cfg-path', '/tmp/tmp0e6d3mps']
+[2023-08-08T05:44:30.527+0000] {standard_task_runner.py:85} INFO - Job 1076: Subtask bash_task
+[2023-08-08T05:44:30.575+0000] {task_command.py:410} INFO - Running <TaskInstance: catchup_backfill_dag.bash_task manual__2023-08-08T05:44:29.492442+00:00 [running]> on host dbea7a0272b2
+[2023-08-08T05:44:30.653+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Zack' AIRFLOW_CTX_DAG_ID='catchup_backfill_dag' AIRFLOW_CTX_TASK_ID='bash_task' AIRFLOW_CTX_EXECUTION_DATE='2023-08-08T05:44:29.492442+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-08T05:44:29.492442+00:00'
+[2023-08-08T05:44:30.654+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-08-08T05:44:30.655+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Hi from bash operator"']
+[2023-08-08T05:44:30.664+0000] {subprocess.py:86} INFO - Output:
+[2023-08-08T05:44:30.666+0000] {subprocess.py:93} INFO - Hi from bash operator
+[2023-08-08T05:44:30.667+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-08-08T05:44:30.692+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=catchup_backfill_dag, task_id=bash_task, execution_date=20230808T054429, start_date=20230808T054430, end_date=20230808T054430
+[2023-08-08T05:44:30.737+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-08-08T05:44:30.755+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

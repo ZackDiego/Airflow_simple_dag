@@ -1,0 +1,21 @@
+[2023-08-08T07:41:33.685+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_w_postgres_v3.insert_data_to_postgres manual__2023-08-08T07:41:31.057681+00:00 [queued]>
+[2023-08-08T07:41:33.692+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_w_postgres_v3.insert_data_to_postgres manual__2023-08-08T07:41:31.057681+00:00 [queued]>
+[2023-08-08T07:41:33.693+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 6
+[2023-08-08T07:41:33.703+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): insert_data_to_postgres> on 2023-08-08 07:41:31.057681+00:00
+[2023-08-08T07:41:33.708+0000] {standard_task_runner.py:57} INFO - Started process 3426 to run task
+[2023-08-08T07:41:33.712+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dag_w_postgres_v3', 'insert_data_to_postgres', 'manual__2023-08-08T07:41:31.057681+00:00', '--job-id', '1124', '--raw', '--subdir', 'DAGS_FOLDER/dag_postgresql.py', '--cfg-path', '/tmp/tmpk6ncaczg']
+[2023-08-08T07:41:33.714+0000] {standard_task_runner.py:85} INFO - Job 1124: Subtask insert_data_to_postgres
+[2023-08-08T07:41:33.760+0000] {task_command.py:410} INFO - Running <TaskInstance: dag_w_postgres_v3.insert_data_to_postgres manual__2023-08-08T07:41:31.057681+00:00 [running]> on host e3ce6cb94b48
+[2023-08-08T07:41:33.836+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Zack' AIRFLOW_CTX_DAG_ID='dag_w_postgres_v3' AIRFLOW_CTX_TASK_ID='insert_data_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2023-08-08T07:41:31.057681+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-08-08T07:41:31.057681+00:00'
+[2023-08-08T07:41:33.838+0000] {sql.py:265} INFO - Executing: 
+            INSERT INTO dag_runs (dt, dag_id) values ('2023-08-08', 'dag_w_postgres_v3')
+        
+[2023-08-08T07:41:33.847+0000] {base.py:73} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2023-08-08T07:41:33.890+0000] {base.py:73} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2023-08-08T07:41:33.899+0000] {sql.py:375} INFO - Running statement: 
+            INSERT INTO dag_runs (dt, dag_id) values ('2023-08-08', 'dag_w_postgres_v3')
+        , parameters: None
+[2023-08-08T07:41:33.901+0000] {sql.py:384} INFO - Rows affected: 1
+[2023-08-08T07:41:33.914+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=dag_w_postgres_v3, task_id=insert_data_to_postgres, execution_date=20230808T074131, start_date=20230808T074133, end_date=20230808T074133
+[2023-08-08T07:41:33.966+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-08-08T07:41:33.983+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

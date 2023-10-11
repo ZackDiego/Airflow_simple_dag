@@ -1,0 +1,13 @@
+[2023-08-08T05:28:51.069+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Greeting_v1.getName scheduled__2023-08-05T16:00:00+00:00 [queued]>
+[2023-08-08T05:28:51.076+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Greeting_v1.getName scheduled__2023-08-05T16:00:00+00:00 [queued]>
+[2023-08-08T05:28:51.077+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 6
+[2023-08-08T05:28:51.096+0000] {taskinstance.py:1327} INFO - Executing <Task(_PythonDecoratedOperator): getName> on 2023-08-05 16:00:00+00:00
+[2023-08-08T05:28:51.102+0000] {standard_task_runner.py:57} INFO - Started process 1326 to run task
+[2023-08-08T05:28:51.118+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Greeting_v1', 'getName', 'scheduled__2023-08-05T16:00:00+00:00', '--job-id', '1058', '--raw', '--subdir', 'DAGS_FOLDER/dag_taskflow_api.py', '--cfg-path', '/tmp/tmpbfbknnoa']
+[2023-08-08T05:28:51.125+0000] {standard_task_runner.py:85} INFO - Job 1058: Subtask getName
+[2023-08-08T05:28:51.246+0000] {task_command.py:410} INFO - Running <TaskInstance: Greeting_v1.getName scheduled__2023-08-05T16:00:00+00:00 [running]> on host dbea7a0272b2
+[2023-08-08T05:28:51.396+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Zack' AIRFLOW_CTX_DAG_ID='Greeting_v1' AIRFLOW_CTX_TASK_ID='getName' AIRFLOW_CTX_EXECUTION_DATE='2023-08-05T16:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-08-05T16:00:00+00:00'
+[2023-08-08T05:28:51.399+0000] {python.py:183} INFO - Done. Returned value was: name
+[2023-08-08T05:28:51.447+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=Greeting_v1, task_id=getName, execution_date=20230805T160000, start_date=20230808T052851, end_date=20230808T052851
+[2023-08-08T05:28:51.529+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-08-08T05:28:51.555+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

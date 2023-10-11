@@ -1,0 +1,13 @@
+[2023-08-08T03:52:44.097+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: our_dag_with_python_operator_v07.get_name scheduled__2022-08-26T00:00:00+00:00 [queued]>
+[2023-08-08T03:52:44.115+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: our_dag_with_python_operator_v07.get_name scheduled__2022-08-26T00:00:00+00:00 [queued]>
+[2023-08-08T03:52:44.116+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 6
+[2023-08-08T03:52:44.210+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): get_name> on 2022-08-26 00:00:00+00:00
+[2023-08-08T03:52:44.217+0000] {standard_task_runner.py:57} INFO - Started process 1603 to run task
+[2023-08-08T03:52:44.235+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'our_dag_with_python_operator_v07', 'get_name', 'scheduled__2022-08-26T00:00:00+00:00', '--job-id', '1016', '--raw', '--subdir', 'DAGS_FOLDER/simple_print.py', '--cfg-path', '/tmp/tmpruobdsk4']
+[2023-08-08T03:52:44.257+0000] {standard_task_runner.py:85} INFO - Job 1016: Subtask get_name
+[2023-08-08T03:52:44.363+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2023-08-08T03:52:44.369+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 1603. PIDs of all processes in the group: [1603]
+[2023-08-08T03:52:44.379+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 1603
+[2023-08-08T03:52:44.487+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1603, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='03:52:43') (1603) terminated with exit code Negsignal.SIGTERM
+[2023-08-08T03:52:44.489+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 143
+[2023-08-08T03:52:45.766+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

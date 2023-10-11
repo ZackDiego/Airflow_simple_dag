@@ -1,0 +1,14 @@
+[2023-08-08T03:49:02.589+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: our_dag_with_python_operator_v07.greet scheduled__2022-01-03T00:00:00+00:00 [queued]>
+[2023-08-08T03:49:02.599+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: our_dag_with_python_operator_v07.greet scheduled__2022-01-03T00:00:00+00:00 [queued]>
+[2023-08-08T03:49:02.600+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 6
+[2023-08-08T03:49:02.616+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): greet> on 2022-01-03 00:00:00+00:00
+[2023-08-08T03:49:02.623+0000] {standard_task_runner.py:57} INFO - Started process 2030 to run task
+[2023-08-08T03:49:02.629+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'our_dag_with_python_operator_v07', 'greet', 'scheduled__2022-01-03T00:00:00+00:00', '--job-id', '328', '--raw', '--subdir', 'DAGS_FOLDER/simple_print.py', '--cfg-path', '/tmp/tmp5igxesg5']
+[2023-08-08T03:49:02.633+0000] {standard_task_runner.py:85} INFO - Job 328: Subtask greet
+[2023-08-08T03:49:02.717+0000] {task_command.py:410} INFO - Running <TaskInstance: our_dag_with_python_operator_v07.greet scheduled__2022-01-03T00:00:00+00:00 [running]> on host e301933437eb
+[2023-08-08T03:49:02.779+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2023-08-08T03:49:02.859+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 2030. PIDs of all processes in the group: [2030]
+[2023-08-08T03:49:02.870+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 2030
+[2023-08-08T03:49:02.982+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=2030, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='03:49:01') (2030) terminated with exit code Negsignal.SIGTERM
+[2023-08-08T03:49:02.987+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 143
+[2023-08-08T03:49:03.103+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
